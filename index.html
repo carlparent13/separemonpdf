@@ -350,7 +350,7 @@ async function process() {
     const pdfB64 = toBase64(pdfBytes);
     setProgress(30, 'Traitement en cours...');
 
-    const resp = await fetch('/.netlify/functions/split_pdf', {
+    const resp = await fetch('https://separemonpdf.onrender.com/split', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
